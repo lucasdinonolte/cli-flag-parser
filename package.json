@@ -1,0 +1,40 @@
+{
+  "name": "@lucasdinonolte/cli-flag-parser",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "keywords": [],
+  "author": "Lucas Dino Nolte <hello@lucas-nolte.com>",
+  "scripts": {
+    "build": "npm run clean && rollup -c",
+    "clean": "rimraf dist",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "lint": "eslint ./src --ext .ts"
+  },
+  "peerDependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "prettier": "^3.5.3",
+    "rimraf": "^5.0.7",
+    "rollup": "^4.18.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-esbuild": "^6.2.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^8.26.1",
+    "vitest": "^3.0.9",
+    "zod": "^3.24.2"
+  }
+}
