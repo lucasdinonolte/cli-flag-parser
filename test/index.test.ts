@@ -32,6 +32,18 @@ describe('createParser', () => {
     expect(result).toEqual({ verbose: true, output: 'file.txt' });
   });
 
+  it('should ignore positional arguments', () => {
+    const parser = createParser(schema);
+    const result = parser([
+      'build',
+      'name',
+      '--verbose',
+      '--output',
+      'file.txt',
+    ]);
+    expect(result).toEqual({ verbose: true, output: 'file.txt' });
+  });
+
   it('should handle short flags correctly', () => {
     const parser = createParser(shortSchema);
     const result = parser(['-v', '-o', 'file.txt']);
